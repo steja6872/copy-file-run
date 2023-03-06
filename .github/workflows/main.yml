@@ -13,6 +13,7 @@ jobs:
       - name: Git Commands
         run: |
             cd C:/Users/ACER/copy-file
+            git pull
             git add reverse.java
             git commit -m "Add Java file"
             git status
