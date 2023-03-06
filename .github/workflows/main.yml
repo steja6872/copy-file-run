@@ -1,0 +1,20 @@
+name: Copy Desktop File to GitHub
+on: [push]
+   
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: Copy the Desktop File
+        run: cp C:/Users/ACER/Desktop/java-programs/reverse.java C:/Users/ACER/copy-file  
+          
+      - name: Git Commands
+        run: |
+            cd C:/Users/ACER/copy-file
+            git pull
+            git add reverse.java
+            git commit -m "Add Java file"
+            git status
+            git push -u origin main
