@@ -18,3 +18,8 @@ jobs:
             git commit -m "Add Java file"
             git status
             git push -u origin main
+            
+      - name: Run the java file
+        run: |
+             javac reverse.java
+             java reverse
