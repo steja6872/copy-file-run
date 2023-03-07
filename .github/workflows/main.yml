@@ -24,7 +24,7 @@ jobs:
         with:
           java-version: 1.11
           
-      - name: Run the java file
+      - name: Run the java file print the RESULT
         run: |
              javac reverse.java
              java reverse
